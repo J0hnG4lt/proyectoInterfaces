@@ -8,6 +8,8 @@
               content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
         -->
         
+        <script type="text/javascript" src="d3.min.js"></script>
+        
         <style>
         
         
@@ -130,6 +132,9 @@
             
         }
         
+        
+        
+        
         </style>
         
 </head>
@@ -137,7 +142,7 @@
 <body>
         <div id="barra-superior" class="contenedor barra-superior" style="height:10%">
             
-            <div id="boton-atras" class="boton"></div>
+            <div id="boton-atras" class="boton" onclick="window.location='home.html';"></div>
             <div id="boton-comparar" class="boton" > 
                 <span>Comparar</span> 
             </div>
@@ -150,7 +155,7 @@
                 <span><h1>Electricidad</h1></span>
             </div>
             <div id="contenido-principal" class="seccion-contenido">
-                <canvas id="grafica-electricidad"></canvas>
+                <svg id="grafica-electricidad"></svg>
             </div>
             <div id="informacion-adicional" class="seccion-contenido">
                 <div id="primera">
