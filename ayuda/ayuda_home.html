@@ -27,6 +27,7 @@
         
         .contenido{
             flex-direction: column;
+            display:flex;
         }
         
         #titulo{
@@ -61,23 +62,21 @@
         }
         
         #boton-atras {
-            background-image:url("iconos/back.svg");
+            background-image:url("../iconos/back.svg");
             background-repeat: no-repeat;
             background-size: 100% 100%;
         }
         
         #boton-configuracion {
-            background-image:url("iconos/settings.svg");
+            background-image:url("../iconos/settings.svg");
             background-repeat: no-repeat;
             background-size: 100% 100%;
-           
         }
         
         #boton-ayuda {
-            background-image:url("iconos/help.svg");
+            background-image:url("../iconos/help.svg");
             background-repeat: no-repeat;
             background-size: 100% 100%;
-            
         }
         
         
@@ -91,7 +90,6 @@
             border-style: solid;
             border-radius: 15%;
             border-color: black;
-           
         }
         
         
@@ -103,16 +101,14 @@
             top:10%;
             left:0%;
             color:black;
+            text-align:center;
         }
         
         .seccion-contenido{
-            display: flex;
-            flex-direction: row;
             font-size : 400%;
-            justify-content : center;
-            text-align:center;
+            text-align:left;
             color:black;
-            flex-basis:50%;
+            
         }
         
         .seccion-contenido h3{
@@ -123,25 +119,15 @@
             text-align:left;
         }
         
-        .seccion-contenido > div {
-            flex-basis:50%;
+        
+        #texto-ayuda{
+            flex-basis:80%;
+            overflow-y: scroll;
+            font-size:200%;
+            padding:5%;
         }
         
         
-        table {
-            border-collapse: collapse;
-            width:80%;
-            
-        }
-
-        table, th, td {
-            border: 1px solid black;
-        }
-        
-        
-        th, td {
-            padding: 3%;
-        }
         
         
         </style>
@@ -151,46 +137,54 @@
 <body>
         <div id="barra-superior" class="contenedor barra-superior" style="height:10%">
             
-            <div id="boton-atras" class="boton" onclick="window.location='home.html';"></div>
-            <div id="boton-comparar" class="boton"> 
+            <div id="boton-atras" class="boton" onclick="window.location='../home.html';"></div>
+            <div id="boton-comparar" class="boton" > 
                 <span>Comparar</span> 
             </div>
-            <div id="boton-ayuda" class="boton" onclick="window.location='ayuda/ayuda_record_consumo_electricidad.html'" ></div>
+            <div id="boton-ayuda" class="boton" ></div>
             <div id="boton-configuracion" class="boton" ></div>
             
         </div>
         <div id="contenido" class="contenedor contenido" style="height:90%">
+            
             <div id="titulo" class="seccion-contenido">
-                <span><h1>Record de Consumo Eléctrico</h1></span>
+                <span><h1>Ayuda: Consumo</h1></span>
             </div>
 
-            <div id="informacion-adicional-electricidad" class="seccion-contenido">
-                <table id="consumo_por_mes">
-                  <tr>
-                    <th>Mes</th>
-                    <th>Consumo</th> 
-                  </tr>
-                  <tr>
-                    <td>ENE</td>
-                    <td>1200W</td> 
-                  </tr>
-                  <tr>
-                    <td>FEB</td>
-                    <td>1400W</td> 
-                  </tr>
-                  <tr>
-                    <td>MAR</td>
-                    <td>1700W</td> 
-                  </tr>
-                  <tr>
-                    <td>APR</td>
-                    <td>1500W</td> 
-                  </tr>
-                </table>
+            <div id="texto-ayuda" class="seccion-contenido">
+                <p>
+                    Bei Nacht im Dorf der Wächter rief: Elfe! <br>
+                    Ein ganz kleines Elfchen im Walde schlief <br>
+                    wohl um die Elfe!                         <br>
+                    Und meint, es rief ihm aus dem Tal        <br>
+                    bei seinem Namen die Nachtigall,          <br>
+                    oder Silpelit hätt' ihm gerufen.          <br>
+                                                              <br>
+                    Reibt sich der Elf' die Augen aus,        <br>
+                    begibt sich vor sein Schneckenhaus        <br>
+                    und ist als wie ein trunken Mann,         <br>
+                    sein Schläflein war nicht voll getan,     <br>
+                    und humpelt also tippe tapp               <br>
+                    durch's Haselholz in's Tal hinab,         <br>
+                    schlupft an der Mauer hin so dicht,       <br>
+                    da sitzt der Glühwurm Licht an Licht.     <br>
+                                                              <br>
+                    Was sind das helle Fensterlein?           <br>
+                    Da drin wird eine Hochzeit sein:          <br>
+                    die Kleinen sitzen bei'm Mahle,           <br>
+                    und treiben's in dem Saale.               <br>
+                    Da guck' ich wohl ein wenig 'nein!«       <br>
+                                                              <br>
+                    Pfui, stößt den Kopf an harten Stein!     <br>
+                    Elfe, gelt, du hast genug?                <br>
+                    Gukuk!                                    <br>
+                </p>
             </div>
 
-            </div>
+            
         </div>
+        
+
 </body>
 
 </html>
