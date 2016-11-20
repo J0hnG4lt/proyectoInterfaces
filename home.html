@@ -124,7 +124,6 @@
             flex-basis:50%;
         }
         
-        
 
         
         
@@ -146,6 +145,7 @@
             
         </div>
         <div id="contenido" class="contenedor contenido" style="height:90%">
+            
             <div id="titulo" class="seccion-contenido">
                 <span><h1>Consumo</h1></span>
             </div>
@@ -154,12 +154,23 @@
                 <div class="primera" style="background-image : url('iconos/Lightbulb.svg');
                                          background-repeat : no-repeat;
                                          background-size : 100% 90%;"
-                                     onclick="window.location='consumo_electricidad.html';">
+                                     onclick="window.location='record_de_consumo_electricidad.html';">
                     
                 </div>
                 <div class="segunda">
                     <span><h3>220W </h3></span>
-                    <span><h3>100 </h3></span>
+                    <span><img src="iconos/chart.svg" 
+                               style="display:block;" 
+                               height="30%" 
+                               width="30%"
+                               onclick="window.location='consumo_electricidad.html';"/>
+                    </span>
+                    <span><img src="iconos/calendar.svg"  
+                               style="display:block;" 
+                               height="30%" 
+                               width="30%"
+                               onclick="window.location='calendar.html';"/></span>
+                    <span><img src="iconos/RecordPressed.png"  style="display:block;" height="30%" width="30%"/></span>
                 </div>
             </div>
 
@@ -168,15 +179,29 @@
                                          background-repeat : no-repeat;
                                          background-size : 80% 80%;
                                          background-position: 50% 0%;"
-                                     onclick="window.location='consumo_agua.html';">
+                                     onclick="window.location='record_de_consumo_agua.html';">
                     
                 </div>
-                <div class="segunda">
+                <div class="segunda" >
                     <span><h3>300L/H </h3></span>
-                    <span><h3>100 </h3></span>
+                    <span><img src="iconos/chart.svg" 
+                               style="display:block;" 
+                               height="30%" 
+                               width="30%"
+                               onclick="window.location='consumo_agua.html';"/>
+                    </span>
+                    <span><img src="iconos/calendar.svg"  
+                               style="display:block;" 
+                               height="30%" 
+                               width="30%"
+                               onclick="window.location='calendar.html';"
+                               /></span>
+                    </div>
                 </div>
             </div>
         </div>
+        
+
 </body>
 
 </html>
