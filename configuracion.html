@@ -27,6 +27,7 @@
         
         .contenido{
             flex-direction: column;
+            overflow:scroll;
         }
         
         #titulo{
@@ -70,14 +71,12 @@
             background-image:url("iconos/settings.svg");
             background-repeat: no-repeat;
             background-size: 100% 100%;
-           
         }
         
         #boton-ayuda {
             background-image:url("iconos/help.svg");
             background-repeat: no-repeat;
             background-size: 100% 100%;
-            
         }
         
         
@@ -91,14 +90,13 @@
             border-style: solid;
             border-radius: 15%;
             border-color: black;
-           
         }
         
         
         #titulo span {
             height : 100%;
             width : 100%;
-            font-size : 70%;
+            font-size : 100%;
             position:relative;
             top:10%;
             left:0%;
@@ -127,22 +125,42 @@
             flex-basis:50%;
         }
         
-        
+
+
         table {
             border-collapse: collapse;
-            width:80%;
+            width:85%;
             
-        }
-
-        table, th, td {
-            border: 1px solid black;
         }
         
         
         th, td {
-            padding: 3%;
+            padding: 2%;
         }
         
+        td {
+            text-align:left;
+            
+        }
+        
+        #unidades td{
+            font-size:80%;
+        }
+        
+        .add_elim {
+            text-align:center;
+        }
+        
+        #trackers {
+            margin-top:10%;
+        }
+        
+        input {
+            width:30%;
+            height:50%;
+            padding:0%;
+            margin:0%;
+        }
         
         </style>
         
@@ -152,45 +170,109 @@
         <div id="barra-superior" class="contenedor barra-superior" style="height:10%">
             
             <div id="boton-atras" class="boton" onclick="window.location='home.html';"></div>
-            <div id="boton-comparar" class="boton"> 
+            <div id="boton-comparar" class="boton" > 
                 <span>Comparar</span> 
             </div>
-            <div id="boton-ayuda" class="boton" onclick="window.location='ayuda/ayuda_record_consumo_electricidad.html'" ></div>
-            <div id="boton-configuracion" class="boton" onclick="window.location='configuracion.html';"></div>
+            <div id="boton-ayuda" class="boton" onclick="window.location='ayuda/configuracion.html';"></div>
+            <div id="boton-configuracion" class="boton" ></div>
             
         </div>
         <div id="contenido" class="contenedor contenido" style="height:90%">
+            
             <div id="titulo" class="seccion-contenido">
-                <span><h1>Record de Consumo Eléctrico</h1></span>
+                <span><h1>Configuración</h1></span>
+                
             </div>
 
-            <div id="informacion-adicional-electricidad" class="seccion-contenido">
-                <table id="consumo_por_mes">
+            <div id="unidades" class="seccion-contenido">
+                
+                
+                <table id="tabla_unidades">
                   <tr>
-                    <th>Mes</th>
-                    <th>Consumo</th> 
+                    <th colspan="2">Unidades</th>
                   </tr>
                   <tr>
-                    <td>ENE</td>
-                    <td>1200W</td> 
+                    <th>Electricidad</th>
+                    <th>Agua</th> 
                   </tr>
                   <tr>
-                    <td>FEB</td>
-                    <td>1400W</td> 
+                    <td> 
+                        <input type="radio" name="unidades_elec" value="wats" checked> Watts
+                    </td>
+                    <td>
+                        <input type="radio" name="unidades_agua" value="lit" checked> Litros
+                    </td> 
                   </tr>
                   <tr>
-                    <td>MAR</td>
-                    <td>1700W</td> 
+                    <td>
+                        <input type="radio" name="unidades_elec" value="horse" > Horse of Power
+                    </td>
+                    <td>
+                        <input type="radio" name="unidades_agua" value="pints"> Pints
+                    </td> 
                   </tr>
                   <tr>
-                    <td>APR</td>
-                    <td>1500W</td> 
+                    <td>
+                        <input type="radio" name="unidades_elec" value="joul" > Joules
+                    </td>
+                    <td>
+                        <input type="radio" name="unidades_agua" value="gal" > Galones
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <input type="radio" name="unidades_elec" value="btu"> Btu
+                    </td>
+                    <td>
+                        <input type="radio" name="unidades_agua" value="bar"> Barriles
+                    </td> 
                   </tr>
                 </table>
             </div>
-
+            
+            <div id="trackers" class="seccion-contenido">
+            
+                <table id="tabla_trackers">
+                  <tr>
+                    <th colspan="4">Trackers</th>
+                  </tr>
+                  <tr>
+                    <th colspan="2">Electricidad</th>
+                    <th colspan="2">Agua</th> 
+                  </tr>
+                  <tr>
+                    <td> 
+                        ID=1
+                    </td>
+                    <td class="add_elim">
+                        <img src="iconos/quitar.svg" width="50%" height="50%"/>
+                        
+                    </td>
+                    <td>
+                        ID=2
+                    </td>
+                    <td class="add_elim">
+                        <img src="iconos/quitar.svg" width="50%" height="50%"/>
+                        
+                    </td> 
+                  </tr>
+                  <tr>
+                    <td class="add_elim">
+                        <img src="iconos/agregar.svg" width="50%" height="50%"/>
+                    </td>
+                    <td></td>
+                    <td class="add_elim">
+                        <img src="iconos/agregar.svg" width="50%" height="50%"/>
+                    </td> 
+                    <td></td>
+                  </tr>
+                </table>
+            
             </div>
+            
         </div>
+        
+
 </body>
 
 </html>
