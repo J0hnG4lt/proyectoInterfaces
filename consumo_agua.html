@@ -38,7 +38,7 @@
             
         }
         
-        .seccion-contenido{
+        #informacion-adicional{
             flex-basis:20%;
         }
         
@@ -95,37 +95,53 @@
         #titulo span {
             height : 100%;
             width : 100%;
-            font-size : 100%;
+            font-size : 400%;
             position:relative;
             top:10%;
-            left:0%;
+            left:17%;
             color:black;
         }
-        
-        .seccion-contenido{
+
+        #titulo span h1 {
+
+            position:relative;
+            top:10%;
+            left:17%;
+            color:black;
+        }
+
+
+        #informacion-adicional{
             display: flex;
             flex-direction: row;
             font-size : 400%;
             justify-content : center;
             text-align:center;
             color:black;
-            flex-basis:50%;
         }
         
-        .seccion-contenido h3{
+        #informacion-adicional h3{
             margin: 5%;
         }
         
-        .seccion-contenido .segunda h3{
+        #informacion-adicional #segunda h3{
             text-align:left;
         }
         
-        .seccion-contenido > div {
+        #informacion-adicional > div {
             flex-basis:50%;
         }
         
         
-
+        #contenido-principal > #grafica-electricidad {
+            position:absolute;
+            height:50%;
+            width:94%;
+            margin:2%;
+            left:1%;
+            background-color:white;
+            
+        }
         
         
         
@@ -147,32 +163,18 @@
         </div>
         <div id="contenido" class="contenedor contenido" style="height:90%">
             <div id="titulo" class="seccion-contenido">
-                <span><h1>Consumo</h1></span>
+                <span><h1>Agua</h1></span>
             </div>
-
-            <div id="informacion-adicional-electricidad" class="seccion-contenido">
-                <div class="primera" style="background-image : url('iconos/Lightbulb.svg');
-                                         background-repeat : no-repeat;
-                                         background-size : 100% 90%;"
-                                     onclick="window.location='consumo_electricidad.html';">
-                    
-                </div>
-                <div class="segunda">
-                    <span><h3>220W </h3></span>
-                    <span><h3>100 </h3></span>
-                </div>
+            <div id="contenido-principal" class="seccion-contenido">
+                <div id="grafica-electricidad"></div>
             </div>
-
-            <div id="informacion-adicional-agua" class="seccion-contenido">
-                <div class="primera" style="background-image : url('iconos/water.svg');
-                                         background-repeat : no-repeat;
-                                         background-size : 80% 80%;
-                                         background-position: 50% 0%;"
-                                     onclick="window.location='consumo_agua.html';">
-                    
+            <div id="informacion-adicional" class="seccion-contenido">
+                <div id="primera">
+                    <span><h3>Total: </h3></span>
+                    <span><h3>Promedio: </h3></span>
                 </div>
-                <div class="segunda">
-                    <span><h3>300L/H </h3></span>
+                <div id="segunda">
+                    <span><h3>1000 </h3></span>
                     <span><h3>100 </h3></span>
                 </div>
             </div>
