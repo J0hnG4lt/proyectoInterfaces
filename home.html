@@ -8,135 +8,162 @@
               content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
         -->
         
-        
-         
-        
-        <style>
-        
-        
-        .contenedor {
-            width:100%;
-            display: flex;
-        }
-        
-        .barra-superior{
-            flex-direction: row;
-            justify-content: center;
-            align-items:center;
-        }
-        
-        .contenido{
-            flex-direction: column;
-        }
-        
-        #titulo{
-            flex-basis:20%;
-        }
-        
-        #contenido-principal{
-            flex-basis:60%;
-            
-        }
-        
-        .seccion-contenido{
-            flex-basis:20%;
-        }
-        
-        .contenedor > .boton {
-            flex-basis:24.5%;
-            height:90%;
 
-        }
-        
+        <style>
+
         html, body {
             background: lightblue;
-
             color: #961907;
-            position:relative;
             overflow: hidden;
             width: 100%;
             height:100%;
             margin:0px;
+        }
+        
+        
+        #barra-superior{
+            position:absolute;
+            width:100%;
+            height:10%;
+            
+        }
+        .boton{
+            position:absolute;
+            width:25%;
+            height:100%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            top:0%;
+        }
+        #boton-atras{
+            left:0%;
+            background-image:url("iconos/back.svg");
+        }
+        #boton-comparar{
+            left:25%;
+        }
+        #boton-comparar span{
+            font-size: 4vw;
+            display:block;
+            position:absolute;
+            top:5vw;
+            outline:solid;
+        }
+        #boton-ayuda{
+            left:50%;
+            background-image:url("iconos/help.svg");
+        }
+        #boton-configuracion{
+            left:75%;
+            background-image:url("iconos/settings.svg");
+        }
+        
+        #contenido {
+            position:absolute;
+            width:100%;
+            height:90%;
+            top:10%;
+        }
+        
+        #titulo {
+            position:absolute;
+            width:100%;
+            height:10%;
+            top:0%;
+        }
+        
+        #titulo span{
+            display:block;
+            position:absolute;
+            width:100%;
+            height:100%;
+            top:5%;
+        }
+        
+        #titulo span h1{
+            display:block;
+            margin:0px;
+            padding:0px;
+            font-size: 10vw;
+            text-align:center;
+        }
+        
+        #informacion-adicional-electricidad{
+            display:block;
+            position:absolute;
+            width:100%;
+            height:45%;
+            top:10%;
+        }
+        
+        #informacion-adicional-agua{
+            display:block;
+            position:absolute;
+            width:100%;
+            height:45%;
+            top:55%;
+        }
+        
+        .primera{
+            display:block;
+            position:absolute;
+            width:50%;
+            height:100%;
+            left:0%;
+        }
+        .segunda{
+            display:block;
+            position:absolute;
+            width:50%;
+            height:100%;
+            left:50%;
+        }
+        .segunda span h3{
+            display:inline;
+            margin:0px;
+            padding:0px;
+            font-size: 10vw;
+            text-align:center;
+        }
+        .segunda span {
+            width:100%;
+            height:20%;
+            position:absolute;
+            display:block;
+        }
+        .segunda span img{
+            max-width:100%;
+            height:100%;
+            position:absolute;
+            padding:0px;
+            margin:0px;
+            display:inline;
+            left:25%;
             
         }
         
-        #boton-atras {
-            background-image:url("iconos/back.svg");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
+        #es1{top:0%;}
+        #es2{top:25%;}
+        #es3{top:50%;}
+        #es4{
+            top:75%;
+            left:15%;
+            width: 40%;
         }
         
-        #boton-configuracion {
-            background-image:url("iconos/settings.svg");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-        }
-        
-        #boton-ayuda {
-            background-image:url("iconos/help.svg");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-        }
-        
-        
-        #boton-comparar span{
-            height : 60%;
-            width : 100%;
-            font-size : 500%;
-            position:relative;
-            color: black;
-            top : 20%;
-            border-style: solid;
-            border-radius: 15%;
-            border-color: black;
-        }
-        
-        
-        #titulo span {
-            height : 100%;
-            width : 100%;
-            font-size : 100%;
-            position:relative;
-            top:10%;
-            left:0%;
-            color:black;
-        }
-        
-        .seccion-contenido{
-            display: flex;
-            flex-direction: row;
-            font-size : 400%;
-            justify-content : center;
-            text-align:center;
-            color:black;
-            flex-basis:50%;
-        }
-        
-        .seccion-contenido h3{
-            margin: 5%;
-        }
-        
-        .seccion-contenido .segunda h3{
-            text-align:left;
-        }
-        
-        .seccion-contenido > div {
-            flex-basis:50%;
-        }
-        
+        #as1{top:0%;}
+        #as2{top:25%;}
+        #as3{top:50%;}
 
-        
-        
-        
-        
         </style>
         
 </head>
 
 <body>
-        <div id="barra-superior" class="contenedor barra-superior" style="height:10%">
+    <div id="marco" style="position:absolute;width:100%;height:100%;">
+        <div id="barra-superior" class="contenedor barra-superior">
             
-            <div id="boton-atras" class="boton" onclick="window.location='../home.html';"></div>
+            <div id="boton-atras" class="boton" onclick="window.location='home.html';"></div>
             <div id="boton-comparar" class="boton" > 
                 <span>Comparar</span> 
             </div>
@@ -144,7 +171,7 @@
             <div id="boton-configuracion" class="boton" onclick="window.location='configuracion.html';" ></div>
             
         </div>
-        <div id="contenido" class="contenedor contenido" style="height:90%">
+        <div id="contenido" class="contenedor contenido" >
             
             <div id="titulo" class="seccion-contenido">
                 <span><h1>Consumo</h1></span>
@@ -158,19 +185,13 @@
                     
                 </div>
                 <div class="segunda">
-                    <span><h3>220W </h3></span>
-                    <span><img src="iconos/chart.svg" 
-                               style="display:block;" 
-                               height="30%" 
-                               width="30%"
+                    <span id="es1"><h3>220W </h3></span>
+                    <span id="es2"><img src="iconos/chart.svg" 
                                onclick="window.location='consumo_electricidad.html';"/>
                     </span>
-                    <span><img src="iconos/calendar.svg"  
-                               style="display:block;" 
-                               height="30%" 
-                               width="30%"
+                    <span id="es3"><img src="iconos/calendar.svg"
                                onclick="window.location='calendar.html';"/></span>
-                    <span><img src="iconos/RecordPressed.png"  style="display:block;" height="30%" width="30%"/></span>
+                    <span id="es4"><img src="iconos/RecordPressed.png"/></span>
                 </div>
             </div>
 
@@ -183,17 +204,11 @@
                     
                 </div>
                 <div class="segunda" >
-                    <span><h3>300L/H </h3></span>
-                    <span><img src="iconos/chart.svg" 
-                               style="display:block;" 
-                               height="30%" 
-                               width="30%"
+                    <span id="as1"><h3>300L/H </h3></span>
+                    <span id="as2"><img src="iconos/chart.svg" 
                                onclick="window.location='consumo_agua.html';"/>
                     </span>
-                    <span><img src="iconos/calendar.svg"  
-                               style="display:block;" 
-                               height="30%" 
-                               width="30%"
+                    <span id="as3"><img src="iconos/calendar.svg"  
                                onclick="window.location='calendar.html';"
                                /></span>
                     </div>
@@ -201,7 +216,7 @@
             </div>
         </div>
         
-
+    </div>
 </body>
 
 </html>
