@@ -14,144 +14,159 @@
         <style>
         
         
-        .contenedor {
-            width:100%;
-            display: flex;
-        }
-        
-        .barra-superior{
-            flex-direction: row;
-            justify-content: center;
-            align-items:center;
-        }
-        
-        .contenido{
-            flex-direction: column;
-        }
-        
-        #titulo{
-            flex-basis:20%;
-        }
-        
-        #contenido-principal{
-            flex-basis:60%;
-            
-        }
-        
-        #informacion-adicional{
-            flex-basis:20%;
-        }
-        
-        .contenedor > .boton {
-            flex-basis:24.5%;
-            height:90%;
-
-        }
-        
         html, body {
-            background: lightblue;
-
+            background: grey;
             color: #961907;
-            position:relative;
             overflow: hidden;
             width: 100%;
             height:100%;
             margin:0px;
+        }
+        
+        #marco{
+            width: 360px;
+            height:640px;
+            color: #961907;
+            background-color: lightblue;
+            top:1%;
+            left:35%;
+            position:fixed;
+            outline: solid;
+            outline-color: brown;
+        }
+        
+        #barra-superior{
+            position:absolute;
+            width:100%;
+            height:10%;
             
         }
-        
-        #boton-atras {
-            background-image:url("iconos/back.svg");
+        .boton{
+            position:absolute;
+            width:25%;
+            height:100%;
             background-repeat: no-repeat;
             background-size: 100% 100%;
+            top:0%;
         }
-        
-        #boton-configuracion {
-            background-image:url("iconos/settings.svg");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-        }
-        
-        #boton-ayuda {
-            background-image:url("iconos/help.svg");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-        }
-        
-        
-        #boton-comparar span{
-            height : 60%;
-            width : 100%;
-            font-size : 500%;
-            position:relative;
-            color: black;
-            top : 20%;
-            border-style: solid;
-            border-radius: 15%;
-            border-color: black;
-        }
-        
-        
-        #titulo span {
-            height : 100%;
-            width : 100%;
-            font-size : 400%;
-            position:relative;
-            top:10%;
-            left:20%;
-            color:black;
-        }
-
-        #titulo span h1 {
-
-            position:relative;
-            top:10%;
+        #boton-atras{
             left:0%;
-            color:black;
-            margin-left:-5%;
+            background-image:url("iconos/back.svg");
+        }
+        #boton-comparar{
+            left:25%;
+        }
+        #boton-comparar span{
+            font-size: 150%;
+            display:block;
+            position:absolute;
+            top:30%;
+            outline:solid;
+        }
+        #boton-ayuda{
+            left:50%;
+            background-image:url("iconos/help.svg");
+        }
+        #boton-configuracion{
+            left:75%;
+            background-image:url("iconos/settings.svg");
+        }
+        
+         #contenido {
+            position:absolute;
+            width:100%;
+            height:90%;
+            top:10%;
+        }
+        
+        #titulo {
+            position:absolute;
+            width:100%;
+            height:10%;
+            top:0%;
         }
 
+        #titulo span{
+            display:block;
+            position:absolute;
+            width:100%;
+            height:100%;
+            top:5%;
+        }
+        
+        #titulo span h1{
+            display:block;
+            margin:0px;
+            padding:0px;
+            font-size: 350%;
+            text-align:center;
+        }
+        
+
+        #contenido-principal{
+            position:absolute;
+            width:100%;
+            height:60%;
+            top:10%;
+        }
+        
+        #grafica-electricidad{
+            position:absolute;
+            width:95%;
+            height:95%;
+            top:0%;
+            margin: 2.5%;
+            background-color: white;
+            left:0%;
+        }
 
         #informacion-adicional{
-            display: flex;
-            flex-direction: row;
-            font-size : 400%;
-            justify-content : center;
-            text-align:center;
-            color:black;
-        }
-        
-        #informacion-adicional h3{
-            margin: 5%;
-        }
-        
-        #informacion-adicional #segunda h3{
-            text-align:left;
-        }
-        
-        #informacion-adicional > div {
-            flex-basis:50%;
-        }
-        
-        
-        #contenido-principal > #grafica-electricidad {
             position:absolute;
-            height:50%;
-            width:94%;
-            margin:2%;
-            left:1%;
-            background-color:white;
-            
+            width:100%;
+            height:30%;
+            top:70%;
         }
-        
-        
-        
-        
+
+
+        .primera{
+            display:block;
+            position:absolute;
+            width:50%;
+            height:100%;
+            left:10%;
+        }
+        .segunda{
+            display:block;
+            position:absolute;
+            width:50%;
+            height:100%;
+            left:50%;
+        }
+        .segunda span h3{
+            display:inline;
+            margin:50px;
+            padding:0px;
+            font-size: 200%;
+            text-align:center;
+        }
+        .segunda span {
+            width:100%;
+            height:20%;
+            position:absolute;
+            display:block;
+
+        }
+
+        #es1{top:0%;}
+        #es2{top:25%;}
+
+
         </style>
         
 </head>
 
 <body>
+    <div id="marco">
         <div id="barra-superior" class="contenedor barra-superior" style="height:10%">
             
             <div id="boton-atras" class="boton" onclick="window.location='home.html';"></div>
@@ -162,7 +177,7 @@
             <div id="boton-configuracion" class="boton" onclick="window.location='configuracion.html';"></div>
             
         </div>
-        <div id="contenido" class="contenedor contenido" style="height:90%">
+        <div id="contenido" class="contenedor contenido">
             <div id="titulo" class="seccion-contenido">
                 <span><h1>Electricidad</h1></span>
             </div>
@@ -170,16 +185,17 @@
                 <div id="grafica-electricidad"></div>
             </div>
             <div id="informacion-adicional" class="seccion-contenido">
-                <div id="primera">
+                <div class="primera">
                     <span><h3>Total: </h3></span>
                     <span><h3>Promedio: </h3></span>
                 </div>
-                <div id="segunda">
-                    <span><h3>1000 </h3></span>
-                    <span><h3>100 </h3></span>
+                <div class="segunda">
+                    <span id="es1"><h3>1000 </h3></span>
+                    <span id="es2"><h3>100 </h3></span>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
