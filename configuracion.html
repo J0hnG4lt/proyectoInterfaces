@@ -14,6 +14,10 @@
         <style>
         
         
+    @media only screen and (min-height: 640px) and (min-width: 360px) {
+ 
+
+
         html, body {
             background: grey;
             color: #961907;
@@ -34,7 +38,69 @@
             outline: solid;
             outline-color: brown;
         }
+
+        #boton-comparar span{
+            font-size: 150%;
+            display:block;
+            position:absolute;
+            top:30%;
+            outline:solid;
+        }
+
+        #titulo span h1{
+            display:block;
+            margin:0px;
+            padding:0px;
+            font-size: 350%;
+            text-align:center;
+        }
+
+    }
+       
+    @media only screen and (max-height: 640px) and (min-width: 360px) {
+ 
+
+
+        html, body {
+            background: black;
+            color: #961907;
+            overflow: hidden;
+            width: 100%;
+            height:100%;
+            margin:0px;
+        }
         
+        #marco{
+            width: 35%;
+            height:95%;
+            color: #961907;
+            background-color: lightblue;
+            top:1%;
+            left:35%;
+            position:fixed;
+            outline: solid;
+            outline-color: brown;
+        }
+
+        #boton-comparar span{
+            font-size: 120%;
+            display:block;
+            position:absolute;
+            top:30%;
+            outline:solid;
+        }
+        
+        #titulo span h1{
+            display:block;
+            margin:0px;
+            padding:0px;
+            font-size: 220%;
+            text-align:center;
+        }
+
+    }
+
+
         #barra-superior{
             position:absolute;
             width:100%;
@@ -56,13 +122,7 @@
         #boton-comparar{
             left:25%;
         }
-        #boton-comparar span{
-            font-size: 150%;
-            display:block;
-            position:absolute;
-            top:30%;
-            outline:solid;
-        }
+
         #boton-ayuda{
             left:50%;
             background-image:url("iconos/help.svg");
@@ -94,29 +154,23 @@
             top:5%;
         }
         
-        #titulo span h1{
-            display:block;
-            margin:0px;
-            padding:0px;
-            font-size: 350%;
-            text-align:center;
-        }
-        
 
         #unidades{
             position:absolute;
-            width:100%;
-            height:45%;
+            width:95%;
+            height:40%;
             top:10%;
             margin:5%;
+ 
         }
 
         #trackers{
             position:absolute;
-            width:100%;
-            height:45%;
+            width:95%;
+            height:40%;
             top:55%;
             margin:5%;
+            overflow: scroll;
         }
 
         table {
@@ -137,15 +191,14 @@
         
         #unidades td{
             font-size:80%;
+
         }
         
         .add_elim {
             text-align:center;
         }
         
-        #trackers {
-            margin-top:10%;
-        }
+
         
         input {
             width:30%;
@@ -163,7 +216,7 @@
         <div id="barra-superior" class="contenedor barra-superior" style="height:10%">
             
             <div id="boton-atras" class="boton" onclick="window.location='home.html';"></div>
-            <div id="boton-comparar" class="boton" > 
+            <div id="boton-comparar" class="boton" onclick="window.location='comparar.html';"> 
                 <span>Comparar</span> 
             </div>
             <div id="boton-ayuda" class="boton" onclick="window.location='ayuda/ayuda_configuracion.html';"></div>

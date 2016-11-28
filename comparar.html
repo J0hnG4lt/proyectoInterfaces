@@ -3,18 +3,11 @@
 
 <head>
         <meta charset="utf-8">
-        <!--
-        <meta name="viewport" 
-              content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-        -->
         
-        
-         
-        
-        <style>
- 
 
-    @media only screen and (min-height: 640px) and (min-width: 360px) {
+        <style>
+
+	@media only screen and (min-height: 640px) and (min-width: 360px) {
  
 
 
@@ -51,7 +44,7 @@
             display:block;
             margin:0px;
             padding:0px;
-            font-size: 350%;
+            font-size: 200%;
             text-align:center;
         }
 
@@ -59,20 +52,14 @@
             display:inline;
             margin:50px;
             padding:0px;
-            font-size: 160%;
+            font-size: 200%;
             text-align:center;
         }
-        .primera span h3{
-            font-size: 160%;
-            display:inline;
-            margin:50px;
-            padding:0px;
-        }
- 
-        
-    }
 
-    @media only screen and (max-height: 640px) and (min-width: 360px) {
+        
+	}
+
+	@media only screen and (max-height: 640px) and (min-width: 360px) {
  
 
 
@@ -98,7 +85,7 @@
         }
 
         #boton-comparar span{
-            font-size: 120%;
+            font-size: 100%;
             display:block;
             position:absolute;
             top:30%;
@@ -109,7 +96,7 @@
             display:block;
             margin:0px;
             padding:0px;
-            font-size: 220%;
+            font-size: 150%;
             text-align:center;
         }
 
@@ -120,19 +107,9 @@
             font-size: 150%;
             text-align:center;
         }
-        .primera span h3{
-            font-size: 150%;
-            display:inline;
-            margin:50px;
-            padding:0px;
-        }
 
-    }
+	}
 
-
-
-
-        
         #barra-superior{
             position:absolute;
             width:100%;
@@ -164,7 +141,7 @@
             background-image:url("iconos/settings.svg");
         }
         
-         #contenido {
+        #contenido {
             position:absolute;
             width:100%;
             height:90%;
@@ -177,7 +154,7 @@
             height:10%;
             top:0%;
         }
-
+        
         #titulo span{
             display:block;
             position:absolute;
@@ -186,40 +163,30 @@
             top:5%;
         }
         
- 
-        
 
-        #contenido-principal{
+        
+        #informacion-adicional-electricidad{
+            display:block;
             position:absolute;
             width:100%;
-            height:60%;
+            height:45%;
             top:10%;
         }
         
-        #grafica-electricidad{
-            position:absolute;
-            width:95%;
-            height:95%;
-            top:0%;
-            margin: 2.5%;
-            background-color: white;
-            left:0%;
-        }
-
-        #informacion-adicional{
+        #informacion-adicional-agua{
+            display:block;
             position:absolute;
             width:100%;
-            height:30%;
-            top:70%;
+            height:45%;
+            top:55%;
         }
-
-
+        
         .primera{
             display:block;
             position:absolute;
             width:50%;
             height:100%;
-            left:10%;
+            left:0%;
         }
         .segunda{
             display:block;
@@ -236,46 +203,89 @@
             display:block;
 
         }
+        .segunda span img{
+            max-width:100%;
+            height:100%;
+            position:absolute;
+            padding:0px;
+            margin:0px;
+            display:inline;
+            left:25%;
+            
+        }
+        
+        .segunda p{
+            margin-top:25%;
+            margin-right: 5%;
+        }
 
-        #es1 {top:0%;}
-        #es2 {top:25%;}
-        #pp1 {top:0%;}
-        #pp2 {top:25%;}
-    
+        #es1{top:0%;}
+        #es2{top:25%;}
+        #es3{top:50%;}
+        #es4{
+            top:75%;
+            left:15%;
+            width: 40%;
+        }
+        
+        #as1{top:0%;}
+        #as2{top:25%;}
+        #as3{top:50%;}
+
         </style>
         
 </head>
 
 <body>
-    <div id="marco">
-        <div id="barra-superior" class="contenedor barra-superior" style="height:10%">
+    <div id="marco" >
+        <div id="barra-superior" class="contenedor barra-superior">
             
             <div id="boton-atras" class="boton" onclick="window.location='home.html';"></div>
-            <div id="boton-comparar" class="boton" onclick="window.location='comparar.html';"> 
+            <div id="boton-comparar" class="boton" > 
                 <span>Comparar</span> 
             </div>
-            <div id="boton-ayuda" class="boton" onclick="window.location='ayuda/ayuda_consumo_electricidad.html'"></div>
-            <div id="boton-configuracion" class="boton" onclick="window.location='configuracion.html';"></div>
+            <div id="boton-ayuda" class="boton" onclick="window.location='ayuda/ayuda_home.html';"></div>
+            <div id="boton-configuracion" class="boton" onclick="window.location='configuracion.html';" ></div>
             
         </div>
-        <div id="contenido" class="contenedor contenido">
+        <div id="contenido" class="contenedor contenido" >
+            
             <div id="titulo" class="seccion-contenido">
-                <span><h1>Electricidad</h1></span>
+                <span><h1>Comparación de Consumo</h1></span>
             </div>
-            <div id="contenido-principal" class="seccion-contenido">
-                <div id="grafica-electricidad"></div>
-            </div>
-            <div id="informacion-adicional" class="seccion-contenido">
-                <div class="primera">
-                    <span id="pp1"><h3>Total: </h3></span>
-                    <span id="pp2"><h3>Promedio: </h3></span>
+
+            <div id="informacion-adicional-electricidad" class="seccion-contenido">
+                <div class="primera" style="background-image : url('iconos/bin.png');
+                                         background-repeat : no-repeat;
+                                         background-size : 80% 70%;
+                                         background-position: 10% 30%"
+                                     onclick="window.location='record_de_consumo_electricidad.html';">
+                    
                 </div>
                 <div class="segunda">
-                    <span id="es1"><h3>1000 </h3></span>
-                    <span id="es2"><h3>100 </h3></span>
+                        <p>Tu consumo de electricidad durante este año hubiese podido ser usado para fundir
+                            más de 13000 latas de aluminio</p>
+
+                </div>
+            </div>
+
+            <div id="informacion-adicional-agua" class="seccion-contenido">
+                <div class="primera" style="background-image : url('iconos/wheat.svg');
+                                         background-repeat : no-repeat;
+                                         background-size : 80% 80%;
+                                         background-position: 50% 0%;"
+                                     onclick="window.location='record_de_consumo_agua.html';">
+                    
+                </div>
+                <div class="segunda" >
+                        <p>Tu consumo de agua durante este año hubiese podido ser usado para cultivar
+                            más de 10 hectáreas de trigo por cinco meses</p>
+
                 </div>
             </div>
         </div>
+        
+        
     </div>
 </body>
 
