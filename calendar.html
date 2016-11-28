@@ -99,6 +99,8 @@
 		
 	}
 
+
+	@media only screen and (min-height: 640px) and (min-width: 360px) {
         html, body {
             background: grey;
             color: #961907;
@@ -120,31 +122,86 @@
             outline-color: brown;
         }
 
-	#calendar {
-		max-width: 900px;
-		margin: 0 auto;
-		height:50%;
-		font-size: 100%;
+		#calendar {
+			max-width: 900px;
+			margin: 0 auto;
+			height:50%;
+			font-size: 100%;
+		}
+
+
+	    #titulo {
+	        text-align : center;
+	        font-size : 100%;
+	        height:10%;
+	    }
+
+	    #atras {
+
+	        height:20%;
+	        display:static;
+	        background-image:url('iconos/arrow_left_circle.svg');
+	        background-repeat: no-repeat;
+	        background-size: 80% 80%;
+	        background-position: center;
+	        margin-top:10%;
+	        
+	    }
+
 	}
 
 
-    #titulo {
-        text-align : center;
-        font-size : 100%;
-        height:10%;
-    }
-    
-    #atras {
-
-        height:20%;
-        display:static;
-        background-image:url('iconos/arrow_left_circle.svg');
-        background-repeat: no-repeat;
-        background-size: 80% 80%;
-        background-position: center;
-        margin-top:10%;
+	@media only screen and (max-height: 640px) and (min-width: 360px) {
+        html, body {
+            background: black;
+            color: #961907;
+            overflow: hidden;
+            width: 100%;
+            height:100%;
+            margin:0px;
+        }
         
-    }
+        #marco{
+            width: 35%;
+            height:95%;
+            color: #961907;
+            background-color: lightblue;
+            top:1%;
+            left:35%;
+            position:fixed;
+            outline: solid;
+            outline-color: brown;
+        }
+		#calendar {
+			max-width: 900px;
+			margin: 0 auto;
+			height:50%;
+			font-size: 80%;
+		}
+
+
+	    #titulo {
+	        text-align : center;
+	        font-size : 80%;
+	        height:10%;
+	    }
+
+	    #atras {
+
+	        height:20%;
+	        display:static;
+	        background-image:url('iconos/arrow_left_circle.svg');
+	        background-repeat: no-repeat;
+	        background-size: 80% 80%;
+	        background-position: center;
+	        margin-top:20%;
+	        
+	    }
+
+}
+
+    
+
     
 
 
