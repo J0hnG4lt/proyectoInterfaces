@@ -12,122 +12,161 @@
          
         
         <style>
-        
-        
-        .contenedor {
-            width:100%;
-            display: flex;
-        }
-        
-        .barra-superior{
-            flex-direction: row;
-            justify-content: center;
-            align-items:center;
-        }
-        
-        .contenido{
-            flex-direction: column;
-            display:flex;
-        }
-        
-        #titulo{
-            flex-basis:20%;
-        }
-        
-        #contenido-principal{
-            flex-basis:60%;
-            
-        }
-        
-        .seccion-contenido{
-            flex-basis:20%;
-        }
-        
-        .contenedor > .boton {
-            flex-basis:24.5%;
-            height:90%;
 
-        }
+
+    @media only screen and (min-height: 640px) and (min-width: 360px) {  
         
         html, body {
-            background: lightblue;
-
+            background: grey;
             color: #961907;
-            position:relative;
             overflow: hidden;
             width: 100%;
             height:100%;
             margin:0px;
-            
         }
         
-        #boton-atras {
-            background-image:url("../iconos/back.svg");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
+        #marco{
+            width: 360px;
+            height:640px;
+            color: #961907;
+            background-color: lightblue;
+            top:1%;
+            left:35%;
+            position:fixed;
+            outline: solid;
+            outline-color: brown;
         }
-        
-        #boton-configuracion {
-            background-image:url("../iconos/settings.svg");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-        }
-        
-        #boton-ayuda {
-            background-image:url("../iconos/help.svg");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-        }
-        
-        
+
         #boton-comparar span{
-            height : 60%;
-            width : 100%;
-            font-size : 500%;
-            position:relative;
-            color: black;
-            top : 20%;
-            border-style: solid;
-            border-radius: 15%;
-            border-color: black;
+            font-size: 150%;
+            display:block;
+            position:absolute;
+            top:30%;
+            outline:solid;
         }
-        
-        
-        #titulo span {
-            height : 100%;
-            width : 100%;
-            font-size : 70%;
-            position:relative;
-            top:10%;
-            left:0%;
-            color:black;
+
+        #titulo span h1{
+            display:block;
+            margin:0px;
+            padding:0px;
+            font-size: 150%;
             text-align:center;
         }
+
+
         
-        .seccion-contenido{
-            font-size : 400%;
-            text-align:left;
-            color:black;
+    }
+
+    @media only screen and (max-height: 640px) and (min-width: 360px) {
+ 
+
+
+        html, body {
+            background: black;
+            color: #961907;
+            overflow: hidden;
+            width: 100%;
+            height:100%;
+            margin:0px;
+        }
+        
+        #marco{
+            width: 35%;
+            height:95%;
+            color: #961907;
+            background-color: lightblue;
+            top:1%;
+            left:35%;
+            position:fixed;
+            outline: solid;
+            outline-color: brown;
+        }
+
+        #boton-comparar span{
+            font-size: 120%;
+            display:block;
+            position:absolute;
+            top:30%;
+            outline:solid;
+        }
+        
+        #titulo span h1{
+            display:block;
+            margin:0px;
+            padding:0px;
+            font-size: 120%;
+            text-align:center;
+        }
+
+    }
+
+        #barra-superior{
+            position:absolute;
+            width:100%;
+            height:10%;
             
         }
-        
-        .seccion-contenido h3{
-            margin: 5%;
+        .boton{
+            position:absolute;
+            width:25%;
+            height:100%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            top:0%;
+        }
+        #boton-atras{
+            left:0%;
+            background-image:url("../iconos/back.svg");
+        }
+        #boton-comparar{
+            left:25%;
+        }
+
+        #boton-ayuda{
+            left:50%;
+            background-image:url("../iconos/help.svg");
+        }
+        #boton-configuracion{
+            left:75%;
+            background-image:url("../iconos/settings.svg");
         }
         
-        .seccion-contenido .segunda h3{
-            text-align:left;
+        #contenido {
+            position:absolute;
+            width:100%;
+            height:90%;
+            top:10%;
         }
         
+        #titulo {
+            position:absolute;
+            width:100%;
+            height:10%;
+            top:0%;
+        }
         
+        #titulo span{
+            display:block;
+            position:absolute;
+            width:100%;
+            height:100%;
+            top:5%;
+        }
+
+
         #texto-ayuda{
-            flex-basis:80%;
-            overflow-y: scroll;
-            font-size:200%;
-            padding:5%;
+            display:block;
+            position:absolute;
+            width:100%;
+            height:90%;
+            top:10%;
+            overflow:scroll;
+
         }
         
-        
+        #texto-ayuda > p{
+            margin:10%;
+        }
         
         
         </style>
@@ -135,7 +174,8 @@
 </head>
 
 <body>
-        <div id="barra-superior" class="contenedor barra-superior" style="height:10%">
+    <div id="marco">
+        <div id="barra-superior" class="contenedor barra-superior" >
             
             <div id="boton-atras" class="boton" onclick="window.location='../consumo_agua.html';"></div>
             <div id="boton-comparar" class="boton" > 
@@ -145,7 +185,7 @@
             <div id="boton-configuracion" class="boton" ></div>
             
         </div>
-        <div id="contenido" class="contenedor contenido" style="height:90%">
+        <div id="contenido" class="contenedor contenido" >
             
             <div id="titulo" class="seccion-contenido">
                 <span><h1>Ayuda: Consumo de Agua</h1></span>
@@ -184,7 +224,7 @@
             
         </div>
         
-
+    </div>
 </body>
 
 </html>

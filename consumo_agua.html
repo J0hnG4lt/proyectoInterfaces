@@ -13,6 +13,12 @@
         
         <style>
         
+
+
+    @media only screen and (min-height: 640px) and (min-width: 360px) {
+ 
+
+
         html, body {
             background: grey;
             color: #961907;
@@ -33,6 +39,98 @@
             outline: solid;
             outline-color: brown;
         }
+
+        #boton-comparar span{
+            font-size: 150%;
+            display:block;
+            position:absolute;
+            top:30%;
+            outline:solid;
+        }
+
+        #titulo span h1{
+            display:block;
+            margin:0px;
+            padding:0px;
+            font-size: 350%;
+            text-align:center;
+        }
+        .primera span h3{
+            font-size: 160%;
+            display:inline;
+            margin:50px;
+            padding:0px;
+        }
+        .segunda span h3{
+            display:inline;
+            margin:50px;
+            padding:0px;
+            font-size: 160%;
+            text-align:center;
+        }
+
+        
+    }
+
+    @media only screen and (max-height: 640px) and (min-width: 360px) {
+ 
+
+
+        html, body {
+            background: black;
+            color: #961907;
+            overflow: hidden;
+            width: 100%;
+            height:100%;
+            margin:0px;
+        }
+        
+        #marco{
+            width: 35%;
+            height:95%;
+            color: #961907;
+            background-color: lightblue;
+            top:1%;
+            left:35%;
+            position:fixed;
+            outline: solid;
+            outline-color: brown;
+        }
+
+        #boton-comparar span{
+            font-size: 120%;
+            display:block;
+            position:absolute;
+            top:30%;
+            outline:solid;
+        }
+        
+        #titulo span h1{
+            display:block;
+            margin:0px;
+            padding:0px;
+            font-size: 220%;
+            text-align:center;
+        }
+        .primera span h3{
+            font-size: 150%;
+            display:inline;
+            margin:50px;
+            padding:0px;
+        }
+        .segunda span h3{
+            display:inline;
+            margin:50px;
+            padding:0px;
+            font-size: 150%;
+            text-align:center;
+        }
+
+    }
+
+
+
+
         
         #barra-superior{
             position:absolute;
@@ -55,13 +153,7 @@
         #boton-comparar{
             left:25%;
         }
-        #boton-comparar span{
-            font-size: 150%;
-            display:block;
-            position:absolute;
-            top:30%;
-            outline:solid;
-        }
+
         #boton-ayuda{
             left:50%;
             background-image:url("iconos/help.svg");
@@ -93,13 +185,7 @@
             top:5%;
         }
         
-        #titulo span h1{
-            display:block;
-            margin:0px;
-            padding:0px;
-            font-size: 350%;
-            text-align:center;
-        }
+ 
         
 
         #contenido-principal{
@@ -141,13 +227,7 @@
             height:100%;
             left:50%;
         }
-        .segunda span h3{
-            display:inline;
-            margin:50px;
-            padding:0px;
-            font-size: 200%;
-            text-align:center;
-        }
+
         .segunda span {
             width:100%;
             height:20%;
@@ -155,9 +235,10 @@
             display:block;
 
         }
-
-        #es1{top:0%;}
-        #es2{top:25%;}
+        #es1 {top:0%;}
+        #es2 {top:25%;}
+        #pp1 {top:0%;}
+        #pp2 {top:25%;}
         
         
         
@@ -167,7 +248,7 @@
 
 <body>
     <div id="marco">
-        <div id="barra-superior" class="contenedor barra-superior" style="height:10%">
+        <div id="barra-superior" class="contenedor barra-superior">
             
             <div id="boton-atras" class="boton" onclick="window.location='home.html';"></div>
             <div id="boton-comparar" class="boton" > 
@@ -177,7 +258,7 @@
             <div id="boton-configuracion" class="boton" onclick="window.location='configuracion.html';"></div>
             
         </div>
-        <div id="contenido" class="contenedor contenido" style="height:90%">
+        <div id="contenido" class="contenedor contenido" >
             <div id="titulo" class="seccion-contenido">
                 <span><h1>Agua</h1></span>
             </div>
