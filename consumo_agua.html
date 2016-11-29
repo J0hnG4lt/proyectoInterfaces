@@ -88,6 +88,10 @@
         #marco{
             width: 35%;
             height:95%;
+            max-width: 300px;
+            max-height:480px;
+            min-width: 270px;
+            min-height:420px;
             color: #961907;
             background-color: lightblue;
             top:1%;
@@ -195,13 +199,18 @@
             top:10%;
         }
         
-        #grafica-electricidad{
+        #grafica-agua{
             position:absolute;
             width:95%;
             height:95%;
             top:0%;
             margin: 2.5%;
             background-color: white;
+            background-color: white;
+            background-image: url("iconos/consumo_agua.png");
+            background-repeat: no-repeat;
+            background-size: 250% 190%;
+            background-position: 20% 25%;
             left:0%;
         }
 
@@ -263,7 +272,7 @@
                 <span><h1>Agua</h1></span>
             </div>
             <div id="contenido-principal" class="seccion-contenido">
-                <div id="grafica-electricidad"></div>
+                <div id="grafica-agua"></div>
             </div>
             <div id="informacion-adicional" class="seccion-contenido">
                 <div class="primera">
