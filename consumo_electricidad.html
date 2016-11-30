@@ -9,9 +9,9 @@
         -->
         
         
-        <script src="highstock.js"></script>
-		<script src="exporting.js"></script>
-		<script src="datos_electricidad.js"></script>
+        <script src="highstock.js"></script>  <!-- Librería externa para graficar (http://www.highcharts.com/)-->
+        <script src="exporting.js"></script>  <!-- Librería externa para graficar (http://www.highcharts.com/)-->
+        <script src="datos_electricidad.js"></script>
         <style>
  
 
@@ -286,28 +286,29 @@
             </div>
         </div>
     </div>
+    
+    <!-- Basado en un Demo de gráfica (http://www.highcharts.com/)-->
+    <script type="text/javascript"> 
+    Highcharts.stockChart('grafica-electricidad', {
 
-	<script type="text/javascript">
-	Highcharts.stockChart('grafica-electricidad', {
 
+                rangeSelector: {
+                    selected: 1
+                },
 
-	            rangeSelector: {
-	                selected: 1
-	            },
+                title: {
+                    text: 'Consumo Eléctrico'
+                },
 
-	            title: {
-	                text: 'Consumo Eléctrico'
-	            },
-
-	            series: [{
-	                name: 'Watts por hora',
-	                data: data,
-	                tooltip: {
-	                    valueDecimals: 2
-	                }
-	            }]
-	        });
-	</script>
+                series: [{
+                    name: 'Watts por hora',
+                    data: data,
+                    tooltip: {
+                        valueDecimals: 2
+                    }
+                }]
+            });
+    </script>
 </body>
 
 </html>
